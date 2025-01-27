@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kyle Murphy - Fullstack Developer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', system-ui, sans-serif;
+        }
+
+        body {
+            background: #0a0a0a;
+            color: #e5e7eb;
+            line-height: 1.6;
+            margin: 1.5rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        header {
+            background: linear-gradient(135deg, #2a2a2a, #1a1a1a);
+            color: white;
+            padding: 1rem 0;
+            margin-bottom: 2rem;
+            border-radius: 24px;
+            border: 1px solid #333;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        h1 {
+            font-size: 2.75rem;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.05em;
+            background: linear-gradient(45deg, #00ff88, #60efff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .location-time {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            color: #a1a1a1;
+            font-size: 0.95rem;
+        }
+
+        .bio {
+            font-size: 1.25rem;
+            margin: 2rem 0;
+            max-width: 800px;
+            color: #d1d5db;
+            line-height: 1.8;
+        }
+
+        .section {
+            background: #161616;
+            padding: 2.5rem;
+            border-radius: 24px;
+            border: 1px solid #262626;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
+        }
+
+        .section h2 {
+            color: #60efff;
+            margin-bottom: 2rem;
+            font-size: 1.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .badge-list {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
+        .badge {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 0.75rem 1.25rem;
+            border-radius: 12px;
+            font-size: 0.95rem;
+            border: 1px solid #333;
+            backdrop-filter: blur(4px);
+            transition: all 0.2s ease;
+        }
+
+        .badge:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .contact-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.75rem;
+            margin-top: 1rem;
+        }
+
+        .contact-links a {
+            color: #e5e7eb;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            transition: all 0.2s ease;
+            padding: 0.75rem 1.25rem;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid #333;
+        }
+
+        .contact-links a:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+            color: #60efff;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                margin: 0.5rem;
+            }
+            
+            .container {
+                padding: 1rem;
+            }
+            
+            .header-content {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .section {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div>
+                    <h1>Kyle Murphy</h1>
+                    <div class="location-time">
+                        <span>Chicago, IL</span>
+                        <span id="current-time"></span>
+                    </div>
+                </div>
+                <div class="contact-links">
+                    <a href="mailto:km127pll@proton.me">
+                        <i class="fas fa-envelope"></i>
+                        Email
+                    </a>
+                    <a href="https://km127pl.github.io" target="_blank">
+                        <i class="fas fa-globe"></i>
+                        Website
+                    </a>
+                    <a href="https://techhub.social/@km127pl" target="_blank">
+                        <i class="fab fa-mastodon"></i>
+                        @km127pl
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="section">
+            <p class="bio">
+                Fullstack developer passionate about Machine Learning & Generative AI, crafting robust solutions across the stack with modern technologies.
+            </p>
+            
+            <div class="tech-grid">
+                <div>
+                    <h2>About Me</h2>
+                    <ul class="badge-list">
+                        <li class="badge">he/him</li>
+                        <li class="badge">Frontend Specialist</li>
+                        <li class="badge">Backend Architect</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h2>Core Stack</h2>
+                    <ul class="badge-list">
+                        <li class="badge">JavaScript/TS</li>
+                        <li class="badge">React & Angular</li>
+                        <li class="badge">Node & Express</li>
+                        <li class="badge">Python</li>
+                        <li class="badge">MongoDB/SQL</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h2>Technologies</h2>
+                    <div class="tech-grid" style="gap: 1.5rem">
+                        <div>
+                            <h3>Frontend</h3>
+                            <ul class="badge-list">
+                                <li class="badge">React</li>
+                                <li class="badge">Angular</li>
+                                <li class="badge">Material Design</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3>Backend</h3>
+                            <ul class="badge-list">
+                                <li class="badge">Spring</li>
+                                <li class="badge">Node.js</li>
+                                <li class="badge">Express</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3>Mobile</h3>
+                            <ul class="badge-list">
+                                <li class="badge">Android</li>
+                                <li class="badge">iOS</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function updateTime() {
+            const options = {
+                hour: 'numeric',
+                minute: '2-digit',
+                timeZoneName: 'short'
+            };
+            const timeString = new Date().toLocaleTimeString('en-US', options);
+            document.getElementById('current-time').textContent = timeString;
+        }
+        
+        updateTime();
+        setInterval(updateTime, 1000);
+    </script>
+</body>
+</html>
